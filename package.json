@@ -1,0 +1,25 @@
+{
+  "name": "Portfolio-web-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kir-avramenko/Portfolio-web-site.git"
+  },
+  "keywords": [],
+  "author": "Kyrylo Avramenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kir-avramenko/Portfolio-web-site/issues"
+  },
+  "homepage": "https://github.com/kir-avramenko/Portfolio-web-site#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  }
+}

@@ -1,0 +1,124 @@
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #445151;
+  color: #e0e0e0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+p, li {
+  font-size: 1.1rem;
+  color: #bdbdbd;
+}
+
+/*#region section 1 */
+.section-1 {
+  padding-top: 35vh;
+  /* padding-left: 20vw; */
+  text-align: center;
+}
+
+.section-1 h1 {
+  color: #f5f5f5;
+  margin-bottom: 10px;
+}
+
+.section-1 p {
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.section-1 a {
+  color: #7a7c80;
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+.section-1 a:hover {
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/*#endregion section 1 */
+
+li {
+  margin: 10px 0;
+}
+/* .section-1, .section-2 {
+  border-style: dashed;
+} */
+
+/*#region section 2 */
+.section-2 {
+  padding-top: 20vh;
+  width: 90%;
+  margin-left: 2.5rem;
+  text-align: left;
+}
+
+.section-2 h2 {
+  margin-bottom: 10px;
+}
+
+.section-2 p {
+  padding-bottom: 10px;
+  margin: 0;
+  padding-left: 27px;
+}
+
+.section-2 a {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+.section-2 a:hover {
+  color: #fff;
+  cursor: pointer;
+}
+/*#endregion section 2 */
+
+@media (max-width: 780px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  p, li {
+    font-size: 1.0rem;
+    color: #bdbdbd;
+  }
+
+  .section-1 {
+    padding: 0;
+    padding-top: 2vh;
+    width: 100%;
+  }
+  .section-2 {
+    padding: 0;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    margin-left: 0rem;
+    width: 100%;
+  }
+}
