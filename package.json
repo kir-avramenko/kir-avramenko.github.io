@@ -1,12 +1,12 @@
 {
   "name": "Portfolio-web-site",
   "version": "1.0.0",
-  "description": "",
+  "description": "Source code of portfolio web page: [kyrylo-1.github.io](https://kyrylo-1.github.io/)",
   "main": "index.js",
   "scripts": {
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/index.html"
+    "dev": "parcel index.html"
   },
   "repository": {
     "type": "git",
