@@ -20,7 +20,7 @@ p {
 }
 
 .header {
-  padding: 1em;
+  padding: -em;
   background: #4acaa8;
   color: #d2f2e9;
   top: 0;
@@ -38,13 +38,15 @@ p {
 
 .header ul {
   list-style: none;
+}
+
+.header nav ul {
   padding: 0;
   margin-top: 15%;
 }
 
-.header ul li {
+.header  li {
   font-size: 1.3rem;
-  margin: 15px 0;
 }
 
 .header a {
@@ -52,17 +54,37 @@ p {
   color: #fff;
 }
 
-.social-icons {
+.header nav ul li {
+  border-top: solid 2px #5ccfb1;
+  display: block;
+  padding: 0;
   /* border-style: dashed; */
-  display: inline-grid;
-  grid-template-columns: 30px 30px 30px;
-  grid-gap: 9px;
 }
 
-.social-icons a :hover,
+.header nav ul li a {
+  display: block;
+  background: #4acaa8;
+  color: #fff;
+}
+
+.header nav ul li a.active {
+  background: #fff;
+  color: #4acaa8;
+}
+
+
+.header .social-icons {
+  /* border-style: dashed; */
+  padding:  0;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.header .social-icons a :hover,
 :focus {
   color: #ffffff;
 }
-.social-icons a {
+.header .social-icons a {
   color: #b7eadc;
 }
