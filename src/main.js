@@ -1,3 +1,5 @@
+"use strict";
+
 function clickEvent(event) {
   var targetElement = event.target || event.srcElement;
 

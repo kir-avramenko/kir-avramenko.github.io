@@ -6,19 +6,19 @@
   "scripts": {
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel index.html"
+    "dev": "parcel src/index.html"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kir-avramenko/Portfolio-web-site.git"
+    "url": "git+https://github.com/kyrylo-1/Portfolio-web-site.git"
   },
   "keywords": [],
   "author": "Kyrylo Avramenko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kir-avramenko/Portfolio-web-site/issues"
+    "url": "https://github.com/kyrylo-1/Portfolio-web-site/issues"
   },
-  "homepage": "https://github.com/kir-avramenko/Portfolio-web-site#readme",
+  "homepage": "https://github.com/kyrylo-1/Portfolio-web-site#readme",
   "devDependencies": {
     "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.0.0",
