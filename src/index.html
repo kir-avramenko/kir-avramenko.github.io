@@ -8,56 +8,79 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="./imgs/code.png" />
     <title>Kyrylo</title>
   </head>
   <body>
-    <!-- Header -->
-    <section class="header">
-      <header>
-        <!-- <span class="image avatar"><img src="images/avatar.jpg" alt="" /></span> -->
-        <h1 id="logo">Kyrylo Avramenko</h1>
-        <p>Software engineer</p>
-
-      </header>
+    <div id="root">
       <nav class="nav">
-        <ul>
-          <li><a href="#one" class="active">About</a></li>
-          <li><a href="#two">Experience</a></li>
-          <li><a href="#three">Skills</a></li>
-          <li><a href="#four">Contact</a></li>
-        </ul>
-      </nav>
-      <footer>
-        <ul class="social-icons">
+        <ol>
           <li>
-            <a href="https://github.com/kyrylo-1" target="_blank">
-              <i class="fab fa-github"></i
-            ></a>
+            <a href="#one">
+              <i class="fas fa-user-alt nav-left-ic"></i>
+              About
+            </a>
           </li>
-          <li>
-            <a href="https://www.linkedin.com/in/kyrylo-1/" target="_blank">
-              <i class="fab fa-linkedin"></i
-            ></a>
-          </li>
-          <li>
-            <a href="mailto:kir.avramenko@gmail.com" target="_top">
-              <i class="fas fa-envelope"></i
-            ></a>
-          </li>
-        </ul>
-      </footer>
-    </section>
 
-    <div id="wrapper">
-      <section id="one">
-        <p>
-          2+ years of Software development experience; Strong skills in
-          Object-Oriented Programming and Design; Critical thinking and
-          problem-solving skill; Experience in unit testing and TDD
-        </p>
-      </section>
+          <!-- <li>
+            <a href="#two">
+              <i class="fas fa-hammer nav-left-ic"></i>
+              Skills
+            </a>
+          </li> -->
+
+          <li>
+            <a href="#three">
+              <i class="fas fa-laptop nav-left-ic"></i>
+              Experience
+            </a>
+          </li>
+
+          <li>
+            <a href="#four">
+              <i class="fas fa-envelope nav-left-ic"></i>
+              Contacts
+            </a>
+          </li>
+        </ol>
+      </nav>
+
+      <div id="wrapper">
+        <section id="one">
+          <div class="xp-card">
+              <p>
+                  2+ years of Software development experience; Strong skills in
+                  Object-Oriented Programming and Design; Critical thinking and
+                  problem-solving skill; Experience in unit testing and TDD
+                </p>
+          </div>
+
+        </section>
+
+        <section id="three">
+          <h2>Experience</h2>
+          <div class="xp-card">
+            <div class="xp-card-header">
+              <img src="./imgs/ms_logo.png" alt="Microsoft logo" />
+              <div class="header-info">
+                <h3>Software Design Engineer</h3>
+                <h4>Microsoft via InConsulting</h3>
+                <h5>Feb 2019 - June 2019</h5>
+              </div>
+            </div>
+
+            <div class="xp-description">
+              <p>Did apprenticeship in <a href="http://aka.ms/b2c" target="_blank">identity management team</a>. I was implementing full stack project that allows customers to setup RestApi endpoints on Azure Portal during sign up flow</p>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Knockout JS</span>
+              <span class="skill-tag">C#</span>
+              <br><br>
+              <img src="./imgs/azure_b2c.jpg" alt="azure b2c scheme" />
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
 
     <script src="main.js"></script>
