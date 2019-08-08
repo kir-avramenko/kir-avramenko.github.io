@@ -70,16 +70,16 @@ body {
   font-weight: normal;
 } */
 
-#wrapper .xp-card {
+#wrapper .card {
   background: #fff;
   padding: 1rem;
   box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
   border-radius: 4px;
   max-width: 50rem;
-  margin: 0 auto;
+  margin: 0 auto 1rem 0;
 }
 
-#wrapper .xp-card-header {
+#wrapper .card-header {
   /* display: inline-grid;
   grid-template-columns: repeat(2, 1fr); */
   height: 4rem;
@@ -120,7 +120,7 @@ body {
   padding: 0 0 0.3rem 0;
 }
 
-.xp-card-header img {
+.card-header img {
   width: 2.5rem;
   height: 2.5rem;
   margin-top: 0.3rem
@@ -152,3 +152,33 @@ body {
 #wrapper .xp-description img{
   object-fit: contain;
 }
+
+.contact-links{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  text-align: center;
+  /* justify-content: space-around; */
+}
+.contact-links:first-child{
+  margin-right: 0.7rem;
+}
+
+.contact-links a{
+  color: #2a5885;
+  text-decoration: none;
+}
+
+.contact-links span::after{
+  content: "||";
+  color: #525f7f;
+  margin: 0 30px;
+}
+
+.contact-links span:nth-child(3)::after {
+  content: "";
+  margin: 0;
+}
+/* .contact-item :first-child{
+  margin-right: 0.7rem;
+} */
