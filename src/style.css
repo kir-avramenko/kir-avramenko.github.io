@@ -26,7 +26,6 @@ body {
 /*#region nav*/
 #root .nav {
   width: 149px;
-  /* border-style: dashed; */
   padding-left: 1rem;
 }
 
@@ -46,44 +45,35 @@ body {
 }
 /*#endregion nav*/
 
-
 #wrapper {
   padding: 0 1rem 0 1rem;
 }
 
 #wrapper h2 {
-  text-align: center;
+  text-align: left;
   color: #000;
   font-weight: normal;
-}
-
-/* #wrapper .company-name {
   font-size: 1.3rem;
-  color: #2a5885;
+  padding: 0.7rem 0 0.7rem 0;
+  margin: 0;
+  border-bottom: 1px solid #e7e8ec;
 }
-
-#wrapper .dates {
-  font-size: 0.8rem;
-  color: #939393;
-  font-family: Roboto, Open Sans, Helvetica Neue;
-  line-height: 14px;
-  font-weight: normal;
-} */
 
 #wrapper .card {
   background: #fff;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
   box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
   border-radius: 4px;
   max-width: 50rem;
   margin: 0 auto 1rem 0;
 }
 
+#wrapper .card p {
+  margin: 0;
+}
+
 #wrapper .card-header {
-  /* display: inline-grid;
-  grid-template-columns: repeat(2, 1fr); */
   height: 4rem;
-  /* display: inline-block; */
   display: flex;
 }
 
@@ -100,17 +90,18 @@ body {
   margin: 0;
 }
 
-.header-info h4,h5{
+.header-info h3,
+h4,
+h5 {
   font-weight: normal;
 }
 .header-info h3 {
-
   font-size: 1.1rem;
   padding: 0;
 }
 .header-info h4 {
-
-  font-size: 1.0rem;
+  font-size: 1rem;
+  color: #939393;
   padding: 0;
 }
 
@@ -123,7 +114,7 @@ body {
 .card-header img {
   width: 2.5rem;
   height: 2.5rem;
-  margin-top: 0.3rem
+  margin-top: 0.3rem;
 }
 
 #wrapper .xp-description {
@@ -149,36 +140,36 @@ body {
   font-family: Camphor, Open Sans, Segoe UI, sans-serif;
 }
 
-#wrapper .xp-description img{
+#wrapper .xp-description img {
   object-fit: contain;
 }
 
-.contact-links{
+.contact-links {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: center;
-  text-align: center;
-  /* justify-content: space-around; */
+  text-align: left;
 }
-.contact-links:first-child{
+.contact-links:first-child {
   margin-right: 0.7rem;
 }
 
-.contact-links a{
+.contact-links a {
   color: #2a5885;
   text-decoration: none;
 }
 
-.contact-links span::after{
+/* .contact-links span::after {
   content: "||";
   color: #525f7f;
-  margin: 0 30px;
-}
+  margin: 0 20px;
+} */
 
 .contact-links span:nth-child(3)::after {
   content: "";
   margin: 0;
 }
-/* .contact-item :first-child{
-  margin-right: 0.7rem;
-} */
+
+.card-content {
+  margin: 1rem 0 0 0;
+}
