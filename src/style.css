@@ -17,19 +17,17 @@ body {
   text-align: left;
 }
 
-#root {
-  padding: 1rem 3rem 0 3rem;
-  margin: 0 auto;
-}
 
 /*#region nav*/
 #root .nav {
-  width: 8rem;
+  width: 10rem;
   padding-left: 0rem;
-  position: relative;
   position: fixed;
   top: 4rem;
   z-index: 1;
+  background: #fff;
+  box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+  border-radius: 4px;
   /* border-style: dashed; */
 }
 
@@ -44,26 +42,38 @@ body {
 }
 
 .nav li {
-  margin-top: 1.3rem;
+  margin-top: 0.3rem;
 }
+
+.nav li a i {
+  width: 16px;
+  height:  16px;
+}
+
 
 .nav li a {
+  padding: 0.3rem 0.3rem 0.3rem 1rem;
   text-decoration: none;
   color: #285473;
-}
+  display: block;
 
+}
+.nav li a span {
+  margin-left: 0.9rem;
+}
 .nav li a:hover {
   background: #e1e5eb;
+  border-radius: 2px;
 }
 
 .nav-left-ic {
-  opacity: 0.75;
+  opacity: 0.55;
 }
 /*#endregion nav*/
 
 #wrapper {
   padding: 0 1rem 0 9rem;
-  margin: 0;
+  margin: 3.3rem 0 2rem 0;
   z-index: 0;
 }
 
@@ -172,6 +182,15 @@ h5 {
   justify-content: center;
   text-align: left;
 }
+
+.contact-links span{
+  padding: 0.6rem 0 0;
+} 
+
+.contact-links span i{
+  margin-right: 0.7rem;
+} 
+
 .contact-links:first-child {
   margin-right: 0.7rem;
 }
@@ -179,6 +198,11 @@ h5 {
 .contact-links a {
   color: #2a5885;
   text-decoration: none;
+}
+
+.contact-links a:hover {
+  color: #2a5885;
+  text-decoration: underline;
 }
 
 .contact-links span:nth-child(3)::after {
@@ -204,8 +228,4 @@ h5 {
   border-bottom: none;
 }
 
-#temp{
-  background: #fff;
-  width: 250px;
-  margin-left: 20rem;
-}
+
