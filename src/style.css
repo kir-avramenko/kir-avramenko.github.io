@@ -133,6 +133,10 @@ h5 {
 }
 
 .skill-tag {
+  margin: 2rem 0 2.5rem 0;
+}
+
+.skill-tag span {
   border: 2px solid #92eac0;
   color: #525f7f;
   border-radius: 4px;
@@ -172,4 +176,18 @@ h5 {
 
 .card-content {
   margin: 1rem 0 0 0;
+}
+
+/* beause of conflict with xp-section */
+#two .card-content {
+  margin: 0;
+}
+
+.xp-section {
+  padding: 1rem 0 1rem 0;
+  border-bottom: 1px solid #e7e8ec;
+}
+
+.card-content div:last-child {
+  border-bottom: none;
 }
