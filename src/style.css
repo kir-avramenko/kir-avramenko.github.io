@@ -18,26 +18,42 @@ body {
 }
 
 #root {
-  display: grid;
-  grid-template-columns: 0.7fr 3.5fr;
-  padding: 1.5rem 5rem 0 5rem;
+  padding: 1rem 3rem 0 3rem;
+  margin: 0 auto;
 }
 
 /*#region nav*/
 #root .nav {
-  width: 149px;
-  padding-left: 1rem;
+  width: 8rem;
+  padding-left: 0rem;
+  position: relative;
+  position: fixed;
+  top: 4rem;
+  z-index: 1;
+  /* border-style: dashed; */
 }
 
 .nav ol {
+  padding: 0;
+  margin: 0;
   list-style: none;
-  line-height: 250%;
-  display: inline;
+}
+
+.nav li:first-child {
+  margin-top: 0;
+}
+
+.nav li {
+  margin-top: 1.3rem;
 }
 
 .nav li a {
   text-decoration: none;
   color: #285473;
+}
+
+.nav li a:hover {
+  background: #e1e5eb;
 }
 
 .nav-left-ic {
@@ -46,7 +62,9 @@ body {
 /*#endregion nav*/
 
 #wrapper {
-  padding: 0 1rem 0 1rem;
+  padding: 0 1rem 0 9rem;
+  margin: 0;
+  z-index: 0;
 }
 
 #wrapper h2 {
@@ -65,7 +83,7 @@ body {
   box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
   border-radius: 4px;
   max-width: 50rem;
-  margin: 0 auto 1rem 0;
+  margin: 0 auto 1rem auto;
 }
 
 #wrapper .card p {
@@ -163,12 +181,6 @@ h5 {
   text-decoration: none;
 }
 
-/* .contact-links span::after {
-  content: "||";
-  color: #525f7f;
-  margin: 0 20px;
-} */
-
 .contact-links span:nth-child(3)::after {
   content: "";
   margin: 0;
@@ -190,4 +202,10 @@ h5 {
 
 .card-content div:last-child {
   border-bottom: none;
+}
+
+#temp{
+  background: #fff;
+  width: 250px;
+  margin-left: 20rem;
 }
