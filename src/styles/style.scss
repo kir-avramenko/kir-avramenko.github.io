@@ -1,0 +1,173 @@
+@import "./variables";
+@import "./mixins";
+@import "./skill-tag";
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  @include resetPaddingAndMargin();
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  background-color: #edeef0;
+  color: $primary-text-color;
+  text-align: left;
+}
+
+#root .nav {
+  width: 10rem;
+  padding-left: 0rem;
+  position: fixed;
+  top: 4rem;
+
+  @include cardbox();
+  ol {
+    @include resetPaddingAndMargin();
+    list-style: none;
+  }
+
+  li {
+    margin-top: 0.3rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    a {
+      padding: 0.3rem 0.3rem 0.3rem 1rem;
+      text-decoration: none;
+      color: $text-link-color;
+      display: block;
+      i {
+        width: 16px;
+        height: 16px;
+      }
+      span {
+        margin-left: 0.9rem;
+      }
+
+      &:hover {
+        background: #e1e5eb;
+      }
+    }
+  }
+}
+
+.nav-left-ic {
+  opacity: 0.55;
+}
+
+#wrapper {
+  padding: 0 1rem 0 9rem;
+  margin: 3.3rem 0 2rem 0;
+  @include anchorRules();
+  h2 {
+    text-align: left;
+    color: $primary-text-color;
+    font-weight: normal;
+    font-size: 1.3rem;
+    padding: 0.7rem 0 0.7rem 0;
+    margin: 0;
+    border-bottom: $border-line;
+  }
+
+  .card {
+    padding: 0 1rem 1rem 1rem;
+    @include cardbox();
+    max-width: 50rem;
+    margin: 0 auto 1rem auto;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .card-header {
+    height: 4rem;
+    display: flex;
+  }
+
+  .header-info * {
+    @include resetPaddingAndMargin();
+  }
+
+  .header-info {
+    display: flex;
+    flex-flow: column wrap;
+    margin-left: 1rem;
+    justify-content: flex-start;
+
+    h3,
+    h4,
+    h5 {
+      font-weight: normal;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+      color: $secondary-text-color;
+    }
+
+    h5 {
+      color: $secondary-text-color;
+      font-size: 0.78rem;
+      padding: 0 0 0.3rem 0;
+    }
+  }
+
+  .xp-description {
+    color: $primary-text-color;
+    @include resetPaddingAndMargin();
+
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+.card-header img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 0.3rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: left;
+
+  span {
+    padding: 0.6rem 0 0;
+
+    i {
+      margin-right: 0.7rem;
+    }
+
+    &:nth-child(3)::after {
+      content: "";
+      margin: 0;
+    }
+  }
+}
+
+.card-content {
+  margin: 1rem 0 0 0;
+
+  div:last-child {
+    border-bottom: none;
+  }
+}
+
+.xp-section {
+  padding: 1rem 0 1rem 0;
+  border-bottom: $border-line;
+}
