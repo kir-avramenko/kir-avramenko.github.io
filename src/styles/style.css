@@ -1,5 +1,14 @@
 .skill-tag {
-  margin: 2rem 0 2.5rem 0;
+  margin: 1.5rem 0 2.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .skill-tag span {
@@ -7,6 +16,7 @@
   color: #525f7f;
   border-radius: 4px;
   padding: 0.45rem;
+  margin: 0.3rem 0.5rem;
   font-family: Camphor, Open Sans, Segoe UI, sans-serif;
 }
 
@@ -105,7 +115,7 @@ body {
 }
 
 #wrapper .card {
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 2rem 1rem 2rem;
   background: #fff;
   -webkit-box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
           box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
