@@ -62,7 +62,7 @@ body {
 }
 
 #wrapper {
-  padding: 0 1rem 0 9rem;
+  padding: 0 1rem 0 12rem;
   margin: 3.3rem 0 2rem 0;
   @include anchorRules();
   h2 {
@@ -95,17 +95,17 @@ body {
     @include resetPaddingAndMargin();
   }
 
+  h3,
+  h4,
+  h5 {
+    font-weight: normal;
+  }
+
   .header-info {
     display: flex;
     flex-flow: column wrap;
     margin-left: 1rem;
     justify-content: flex-start;
-
-    h3,
-    h4,
-    h5 {
-      font-weight: normal;
-    }
 
     h3 {
       font-size: 1.1rem;
@@ -125,10 +125,13 @@ body {
 
   .xp-description {
     color: $primary-text-color;
-    @include resetPaddingAndMargin();
+    padding: 0;
+    margin: 1rem 0 0 0;
 
     img {
-      object-fit: contain;
+      width: 100%;
+      max-height: 25rem;
+      object-fit: cover;
     }
   }
 }
