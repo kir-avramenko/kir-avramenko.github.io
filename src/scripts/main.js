@@ -1,6 +1,6 @@
-import attachWorkExpToCardContent from "./elementsCreator";
-import XpSection from "./xpSection";
-import JobGeneral from "./jobGeneral";
+import attachWorkExpToCardContent from "./elementsCreator.js";
+import XpSection from "./xpSection.js";
+import JobGeneral from "./jobGeneral.js";
 
 const msXp = `Did apprenticeship in ${createLink(
   "identity management team",
@@ -25,9 +25,9 @@ const xpSectionsArr = [
       "Feb 2019 - June 2019"
     ),
     msXp,
-    "/ms_logo.72701fb7.png",
+    "imgs/ms_logo.png",
     ["Typescript", "Knockout JS", "C#", "Unit testing"],
-    "/azure_b2c.0440c1f4.jpg"
+    "imgs/azure_b2c.jpg" 
   ),
 
   new XpSection(
@@ -37,16 +37,16 @@ const xpSectionsArr = [
       "July 2017 – Nov 2018"
     ),
     nasXp,
-    "/nas.ce32c4e4.jpg",
+    "imgs/nas.jpg",
     ["HTML", "CSS", "JavaScript", "C#", "Unit testing", "Selenium"],
-    "visasnippet.jpg"
+    "imgs/visasnippet.jpg"
   ),
   new XpSection(
     new JobGeneral("Game developer", "Superlemon Games", "Dec 2016 - Jan 2019"),
     gameXp,
-    "/superlemonlog.0b9c7449.png",
+    "imgs/superlemonlogo.png",
     ["Unity engine", "C#"],
-    "superlemonsnippet.jpg"
+    "imgs/superlemonsnippet.jpg"
   )
 ];
 
