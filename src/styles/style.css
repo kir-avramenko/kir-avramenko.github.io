@@ -113,6 +113,13 @@
   width: 61.8%;
 }
 
+.website-info .icon {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.5em;
+  font-size: 1em;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

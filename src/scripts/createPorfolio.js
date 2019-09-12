@@ -19,10 +19,20 @@ function websiteInfo(websiteLink) {
   const divCentered = createDivWithClass('centered');
 
   const divForAnchor = document.createElement('div');
-  const anchor = createLink(websiteLink, 'Visit Website');
-  anchor.classList.add('website-link');
-  divForAnchor.appendChild(anchor);
 
+  // == link
+  const anchor = document.createElement('a');
+  anchor.classList.add('website-link');
+  anchor.setAttribute('href', websiteLink);
+  anchor.setAttribute('target', '_blank');
+
+  const iIcon = document.createElement('i');
+  iIcon.setAttribute('class', 'fas fa-external-link-alt icon');
+
+  anchor.innerHTML = iIcon.outerHTML.concat('Visit Website');
+  // == link
+
+  divForAnchor.appendChild(anchor);
   divCentered.appendChild(divForAnchor);
   divWebsiteInfo.appendChild(divCentered);
 
