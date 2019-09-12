@@ -1,0 +1,17 @@
+{
+  "jobs": [
+    {
+      "jobGeneral": {
+        "jobIcon": "https://media.licdn.com/dms/image/C4D0BAQEko6uLz7XylA/company-logo_400_400/0?e=1576108800&v=beta&t=Dnc8pBrZvQ26Adsl9wgXGIuxJ_xE4Nsh-eA7Wv8TWwE",
+        "jobTitle": "Software Design Engineer",
+        "companyName": "Microsoft via InConsulting",
+        "companyWebSite": "https://www.microsoft.com",
+        "dates": "Feb 2019 - June 2019"
+      },
+
+      "jobDesc": "I was implementing full stack project that allows customers to setup RestApi endpoints on Azure Portal during sign up flow",
+      "img": "",
+      "skills": ["Typescript", "Knockout JS", "C#", "Unit testing"]
+    }
+  ]
+}

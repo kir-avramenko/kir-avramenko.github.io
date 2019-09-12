@@ -14,38 +14,55 @@ function websiteImage(imgLink) {
   return divWebsiteImg;
 }
 
-function websiteInfo(websiteLink) {
-  const divWebsiteInfo = createDivWithClass('website-info');
-  const divCentered = createDivWithClass('centered');
+function createDivWithLinkAndIcon(link, textOnLink, iconClasses) {
+  const div = document.createElement('div');
 
-  const divForAnchor = document.createElement('div');
-
-  // == link
   const anchor = document.createElement('a');
   anchor.classList.add('website-link');
-  anchor.setAttribute('href', websiteLink);
+  anchor.setAttribute('href', link);
   anchor.setAttribute('target', '_blank');
 
   const iIcon = document.createElement('i');
-  iIcon.setAttribute('class', 'fas fa-external-link-alt icon');
+  iIcon.setAttribute('class', iconClasses);
+  anchor.innerHTML = iIcon.outerHTML.concat(textOnLink);
 
-  anchor.innerHTML = iIcon.outerHTML.concat('Visit Website');
-  // == link
+  div.appendChild(anchor);
+  return div;
+}
+function createWebsiteInfo(websiteLink, repoLink) {
+  const divWebsiteInfo = createDivWithClass('website-info');
+  const divCentered = createDivWithClass('centered');
+  const divForWebSiteLink = document.createElement('div');
 
-  divForAnchor.appendChild(anchor);
-  divCentered.appendChild(divForAnchor);
+  divForWebSiteLink.appendChild(
+    createDivWithLinkAndIcon(
+      websiteLink,
+      'Visit Website',
+      'fas fa-external-link-alt icon'
+    )
+  );
+
+  divForWebSiteLink.appendChild(
+    createDivWithLinkAndIcon(
+      repoLink,
+      'View on Github',
+      'fab fa-github-alt icon'
+    )
+  );
+
+  divCentered.appendChild(divForWebSiteLink);
   divWebsiteInfo.appendChild(divCentered);
 
   return divWebsiteInfo;
 }
 
-function websiteImgContainer(imgLink, websiteLink) {
+function websiteImgContainer(imgLink, websiteLink, repoLink) {
   const divImgContainer = createDivWithClass(
     'left image-container hoverable big-mobile'
   );
 
   divImgContainer.appendChild(websiteImage(imgLink));
-  divImgContainer.appendChild(websiteInfo(websiteLink));
+  divImgContainer.appendChild(createWebsiteInfo(websiteLink, repoLink));
   return divImgContainer;
 }
 
@@ -78,7 +95,9 @@ function createPorfolioProject(project) {
   const divProject = document.createElement('div');
   divProject.classList.add('project');
 
-  divProject.appendChild(websiteImgContainer(project.img, project.link));
+  divProject.appendChild(
+    websiteImgContainer(project.img, project.link, project.repoLink)
+  );
   divProject.appendChild(
     rightSection(project.name, project.description, project.shortLink)
   );

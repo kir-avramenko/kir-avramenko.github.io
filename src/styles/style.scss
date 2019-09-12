@@ -143,3 +143,31 @@ h1 {
     padding-bottom: 9px;
   }
 }
+
+.company-img {
+  width: 50px;
+  margin: 10px 0 0 0;
+  display: block;
+  float: left;
+}
+
+.experience .project {
+  padding: 18px;
+}
+
+.job-header {
+  padding-bottom: 18px;
+}
+
+.header-info {
+  display: flex;
+  flex-flow: column;
+  padding-left: 15px;
+  h3,
+  h4,
+  h5 {
+    margin: 0;
+    margin-bottom: 0.1rem;
+    font-weight: normal;
+  }
+}

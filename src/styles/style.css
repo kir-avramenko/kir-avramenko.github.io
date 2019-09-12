@@ -276,4 +276,38 @@ h1 {
 .text:not(:last-child) {
   padding-bottom: 9px;
 }
+
+.company-img {
+  width: 50px;
+  margin: 10px 0 0 0;
+  display: block;
+  float: left;
+}
+
+.experience .project {
+  padding: 18px;
+}
+
+.job-header {
+  padding-bottom: 18px;
+}
+
+.header-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding-left: 15px;
+}
+
+.header-info h3,
+.header-info h4,
+.header-info h5 {
+  margin: 0;
+  margin-bottom: 0.1rem;
+  font-weight: normal;
+}
 /*# sourceMappingURL=style.css.map */
