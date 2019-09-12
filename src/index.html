@@ -8,79 +8,39 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
     />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" type="text/css" />
     <link rel="shortcut icon" href="./imgs/code.png" />
     <title>Kyrylo</title>
   </head>
   <body>
-    <div id="root">
-      <nav class="nav">
-        <ol>
-          <li>
-            <a href="#one">
-              <i class="fas fa-user-alt nav-left-ic"></i>
-              <span>About</span>
-            </a>
-          </li>
+    <div class="head">
+      <div class="nav">
+        <a id="nav-portfolio">
+          Portfolio
+        </a>
+        <a id="nav-experience">
+          Experience
+        </a>
+        <a id="nav-about">
+          About
+        </a>
+        <a id="nav-contact">
+          Contact
+        </a>
+      </div>
+      <div class="hi">
+        <h1>Hi, I'm Kyrylo Avramenko.</h1>
+        <p>(I'm a Fullstack software engineer)</p>
+      </div>
+    </div>
 
-          <li>
-            <a href="#two">
-              <i class="fas fa-laptop nav-left-ic"></i>
-              <span>
-                Experience
-              </span>
-            </a>
-          </li>
+    <div class="body">
+      <div class="section portfolio">
+        <div>
+          <h2>My portfolio</h2>
+        </div>
 
-          <li>
-            <a href="#three">
-              <i class="fas fa-envelope nav-left-ic"></i>
-              <span>
-                Contacts
-              </span>
-            </a>
-          </li>
-        </ol>
-      </nav>
-
-      <div id="wrapper">
-        <section id="one" class="card">
-          <h2>Kyrylo Avramenko</h2>
-          <div class="card-content">
-            <p>
-              Hi, I'm software engineer and I like building web apps.
-            </p>
-          </div>
-        </section>
-
-        <section id="two" class="card">
-          <h2>Experience</h2>
-          <div class="card-content"></div>
-        </section>
-
-        <section id="three" class="card">
-          <h2>Contacts</h2>
-          <div class="card-content contact-links">
-            <span>
-              <a href="mailto:kir.avramenko@gmail.com" target="_blank"
-                ><i class="fas fa-envelope nav-left-ic"></i
-                >kir.avramenko@gmail.com
-              </a>
-            </span>
-
-            <span>
-              <a href="https://www.linkedin.com/in/kyrylo-1/" target="_blank"
-                ><i class="fab fa-linkedin nav-left-ic"></i>kyrylo-1
-              </a>
-            </span>
-
-            <span>
-              <a href="https://github.com/kyrylo-1" target="_blank"
-                ><i class="fab fa-github nav-left-ic"></i>kyrylo-1
-              </a>
-            </span>
-          </div>
-        </section>
+        <div id="projects"></div>
       </div>
     </div>
 

@@ -1,22 +1,19 @@
 {
-  "env": {
-    "browser": true,
-    "es6": true
-  },
-  "extends": ["standard", "prettier"],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
+  "extends": ["airbnb-base", "prettier", "plugin:import/warnings"],
+  "root": true,
+  "plugins": ["prettier"],
+  "rules": {
+    "no-console": 1,
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   },
   "parserOptions": {
     "ecmaVersion": 2018,
-    "sourceType": "module"
+    "sourceType": "script"
   },
-  "rules": {
-    "no-console": "off",
-    "no-unused-vars": [
-      "error",
-      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
-    ]
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "commonjs": true
   }
 }
