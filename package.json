@@ -1,35 +1,37 @@
 {
-  "name": "Portfolio-web-site",
+  "name": "my-portfolio",
   "version": "1.0.0",
-  "description": "Source code of portfolio web page: [kyrylo-1.github.io](https://kyrylo-1.github.io/)",
+  "description": "Personal portfolio website",
+  "private": true,
   "scripts": {
     "format": "prettier --write \"src/**/*.{js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html src/imgs/*"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kyrylo-1/Portfolio-web-site.git"
+    "url": "git+https://github.com/kyrylo-1/My-Portfolio.git"
   },
   "keywords": [],
   "author": "Kyrylo Avramenko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kyrylo-1/Portfolio-web-site/issues"
+    "url": "https://github.com/kyrylo-1/My-Portfolio/issues"
   },
-  "homepage": "https://github.com/kyrylo-1/Portfolio-web-site#readme",
-  "devDependencies": {
-    "eslint": "^6.1.0",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-config-standard": "^13.0.1",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-standard": "^4.0.0",
-    "parcel-bundler": "^1.12.3"
-  },
+  "homepage": "https://github.com/kyrylo-1/My-Portfolio#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "parcel-bundler": "^1.12.3"
   }
 }
