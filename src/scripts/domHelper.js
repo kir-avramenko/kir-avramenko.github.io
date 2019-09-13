@@ -6,15 +6,24 @@ function createLink(url, text) {
   return link;
 }
 
-function createElementWithClass(element, className) {
-  const created = document.createElement(element);
+function createDivWithClass(className) {
+  const created = document.createElement('div');
   created.setAttribute('class', className);
 
   return created;
 }
 
-function createDivWithClass(className) {
-  return createElementWithClass('div', className);
+function createLinkAndIcon(link, textOnLink, anchorClasses, iconClasses) {
+  const anchor = document.createElement('a');
+  anchor.setAttribute('class', anchorClasses);
+  anchor.setAttribute('href', link);
+  anchor.setAttribute('target', '_blank');
+
+  const iIcon = document.createElement('i');
+  iIcon.setAttribute('class', iconClasses);
+  anchor.innerHTML = iIcon.outerHTML.concat(textOnLink);
+
+  return anchor;
 }
 
-export { createLink, createDivWithClass, createElementWithClass };
+export { createLink, createDivWithClass, createLinkAndIcon };

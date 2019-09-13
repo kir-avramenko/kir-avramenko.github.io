@@ -1,7 +1,9 @@
 import createPortfolio from './portfolioCreator';
 import createJobItem from './jobCreator';
+import { createLinkAndIcon } from './domHelper';
 import projsList from '../projsList.json';
 import jobs from '../jobs.json';
+import footerData from '../footerData.json';
 
 function createPortfolioFromJson(projects) {
   const divProjects = document.getElementById('portfolio-projects');
@@ -21,5 +23,25 @@ function createJobsFromJson(arrJobs) {
   }
 }
 
+function createFooterItems(arrData) {
+  const footerLinks = document.getElementById('footer-links');
+
+  for (let i = 0; i < arrData.length; i += 1) {
+    const iData = arrData[i];
+    const anchor = createLinkAndIcon(
+      iData.link,
+      iData.name,
+      '',
+      iData.iconClass.concat(' icon')
+    );
+
+    const paragraph = document.createElement('p');
+    paragraph.innerHTML = anchor.outerHTML;
+
+    footerLinks.appendChild(paragraph);
+  }
+}
+
 createPortfolioFromJson(projsList.projects);
 createJobsFromJson(jobs.jobs);
+createFooterItems(footerData.data);

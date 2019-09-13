@@ -1,8 +1,4 @@
-import {
-  createDivWithClass,
-  createLink,
-  createElementWithClass
-} from './domHelper';
+import { createDivWithClass, createLink, createLinkAndIcon } from './domHelper';
 
 function websiteImage(imgLink) {
   const divWebsiteImg = createDivWithClass('website-image');
@@ -14,19 +10,7 @@ function websiteImage(imgLink) {
   return divWebsiteImg;
 }
 
-function createLinkAndIcon(link, textOnLink, iconClasses) {
-
-  const anchor = document.createElement('a');
-  anchor.classList.add('website-link');
-  anchor.setAttribute('href', link);
-  anchor.setAttribute('target', '_blank');
-
-  const iIcon = document.createElement('i');
-  iIcon.setAttribute('class', iconClasses);
-  anchor.innerHTML = iIcon.outerHTML.concat(textOnLink);
-
-  return anchor;
-}
+const classForLink = 'website-link';
 function createWebsiteInfo(websiteLink, repoLink) {
   const divWebsiteInfo = createDivWithClass('website-info');
   const divCentered = createDivWithClass('centered');
@@ -35,6 +19,7 @@ function createWebsiteInfo(websiteLink, repoLink) {
     createLinkAndIcon(
       websiteLink,
       'Visit Website',
+      classForLink,
       'fas fa-external-link-alt icon'
     )
   );
@@ -43,6 +28,7 @@ function createWebsiteInfo(websiteLink, repoLink) {
     createLinkAndIcon(
       repoLink,
       'View on Github',
+      classForLink,
       'fab fa-github-alt icon'
     )
   );
@@ -67,7 +53,8 @@ function rightSection(title, text, shortLink) {
 
   const divInner = document.createElement('div');
 
-  const h3 = createElementWithClass('h3', 'title');
+  const h3 = document.createElement('h3');
+  h3.classList.add('title');
   h3.innerText = title;
 
   const h4 = document.createElement('h4');

@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "name": "Github",
+      "link": "https://github.com/kyrylo-1",
+      "iconClass": "fab fa-github"
+    },
+    {
+      "name": "LinkedIn",
+      "link": "https://www.linkedin.com/in/kyrylo-1/",
+      "iconClass": "fab fa-linkedin"
+    }
+  ]
+}

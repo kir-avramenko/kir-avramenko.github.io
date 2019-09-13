@@ -3,6 +3,7 @@
 @import './skill-tag';
 @import './head';
 @import './websiteinfo';
+@import './footer';
 
 * {
   box-sizing: border-box;
@@ -25,11 +26,6 @@ a {
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   color: #5a5959;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -ms-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
 
   &:hover {
     color: #00aff0;
@@ -41,6 +37,13 @@ a {
   &:hover {
     border-bottom: 1px solid #00aff0;
   }
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.5em;
+  font-size: 1em;
 }
 
 img,
@@ -112,10 +115,6 @@ h1 {
   }
 }
 
-.container {
-  display: inline-block;
-  text-align: left;
-}
 .website-link {
   position: relative;
   display: inline-block;
@@ -130,8 +129,7 @@ h1 {
   font-size: 16px;
   text-align: center;
 }
-.image-container:hover .website-info,
-.image-container.hovering .website-info {
+.image-container:hover .website-info {
   visibility: visible;
   opacity: 1;
 }
