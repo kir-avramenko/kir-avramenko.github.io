@@ -1,6 +1,11 @@
 {
   "data": [
     {
+      "name": "kir.avramenko@gmail.com",
+      "link": "mailto:kir.avramenko@gmail.com",
+      "iconClass": "fas fa-envelope"
+    },
+    {
       "name": "Github",
       "link": "https://github.com/kyrylo-1",
       "iconClass": "fab fa-github"
