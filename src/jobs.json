@@ -12,6 +12,32 @@
       "jobDesc": "I was implementing full stack project that allows customers to setup RestApi endpoints on Azure Portal during sign up flow",
       "img": "",
       "skills": ["Typescript", "Knockout JS", "C#", "Unit testing"]
+    },
+    {
+      "jobGeneral": {
+        "jobIcon": "/imgs/nas.jpg",
+        "jobTitle": "Software Engineer",
+        "companyName": "Institute of Software Systems NAS of Ukraine",
+        "companyWebSite": "http://www.isofts.kiev.ua",
+        "dates": "July 2017 – Nov 2018"
+      },
+
+      "jobDesc": "Worked on Ukrainian transit visa registration government web app with 30k unique visitors per month",
+      "img": "",
+      "skills": ["HTML", "CSS", "JavaScript", "C#", "Unit testing", "Selenium"]
+    },
+    {
+      "jobGeneral": {
+        "jobIcon": "/imgs/superlemonlogo.png",
+        "jobTitle": "Game developer",
+        "companyName": "Superlemon Games",
+        "companyWebSite": "https://www.superlemongames.com/",
+        "dates": "Dec 2016 - Jan 2019"
+      },
+
+      "jobDesc": "Worked part-time as a member of the game dev team. I design code base, program gameplay, worked on CPU & GPU optimization",
+      "img": "",
+      "skills": ["Unity engine", "C#"]
     }
   ]
 }

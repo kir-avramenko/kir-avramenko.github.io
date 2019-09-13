@@ -1,17 +1,22 @@
+import { createLink } from './domHelper';
+
 function createHeaderInfo(jobGeneral) {
   const headerInfo = document.createElement('div');
   headerInfo.setAttribute('class', 'header-info');
 
   const h3 = document.createElement('h3');
-  const h4 = document.createElement('h4');
+  const h4CompanyName = document.createElement('h4');
   const h5 = document.createElement('h5');
 
   h3.textContent = jobGeneral.jobTitle;
-  h4.textContent = jobGeneral.companyName;
+  h4CompanyName.innerHTML = createLink(
+    jobGeneral.companyWebSite,
+    jobGeneral.companyName
+  ).outerHTML;
   h5.textContent = jobGeneral.dates;
 
   headerInfo.appendChild(h3);
-  headerInfo.appendChild(h4);
+  headerInfo.appendChild(h4CompanyName);
   headerInfo.appendChild(h5);
 
   return headerInfo;
@@ -32,6 +37,18 @@ function createHeader(jobGeneral) {
   return divJobHeader;
 }
 
+function createDivSkillsTags(arrSkills) {
+  const divSkillTag = document.createElement('div');
+  divSkillTag.setAttribute('class', 'skill-tag');
+
+  for (let i = 0; i < arrSkills.length; i += 1) {
+    const spanSkill = document.createElement('span');
+    spanSkill.textContent = arrSkills[i];
+    divSkillTag.appendChild(spanSkill);
+  }
+  return divSkillTag;
+}
+
 function createJobDescription(description, skills) {
   const divDesc = document.createElement('div');
   divDesc.setAttribute('class', 'job-description');
@@ -42,6 +59,7 @@ function createJobDescription(description, skills) {
 
   divDesc.appendChild(para);
 
+  divDesc.appendChild(createDivSkillsTags(skills));
   return divDesc;
 }
 

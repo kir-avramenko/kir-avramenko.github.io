@@ -20,11 +20,6 @@
   font-family: Camphor, Open Sans, Segoe UI, sans-serif;
 }
 
-.skill-tag span:hover {
-  cursor: default;
-  color: #2a5885;
-}
-
 .head {
   min-height: 32.8vh;
   background-color: #fff;
