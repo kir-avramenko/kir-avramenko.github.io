@@ -14,8 +14,7 @@ function websiteImage(imgLink) {
   return divWebsiteImg;
 }
 
-function createDivWithLinkAndIcon(link, textOnLink, iconClasses) {
-  const div = document.createElement('div');
+function createLinkAndIcon(link, textOnLink, iconClasses) {
 
   const anchor = document.createElement('a');
   anchor.classList.add('website-link');
@@ -26,31 +25,28 @@ function createDivWithLinkAndIcon(link, textOnLink, iconClasses) {
   iIcon.setAttribute('class', iconClasses);
   anchor.innerHTML = iIcon.outerHTML.concat(textOnLink);
 
-  div.appendChild(anchor);
-  return div;
+  return anchor;
 }
 function createWebsiteInfo(websiteLink, repoLink) {
   const divWebsiteInfo = createDivWithClass('website-info');
   const divCentered = createDivWithClass('centered');
-  const divForWebSiteLink = document.createElement('div');
 
-  divForWebSiteLink.appendChild(
-    createDivWithLinkAndIcon(
+  divCentered.appendChild(
+    createLinkAndIcon(
       websiteLink,
       'Visit Website',
       'fas fa-external-link-alt icon'
     )
   );
 
-  divForWebSiteLink.appendChild(
-    createDivWithLinkAndIcon(
+  divCentered.appendChild(
+    createLinkAndIcon(
       repoLink,
       'View on Github',
       'fab fa-github-alt icon'
     )
   );
 
-  divCentered.appendChild(divForWebSiteLink);
   divWebsiteInfo.appendChild(divCentered);
 
   return divWebsiteInfo;
