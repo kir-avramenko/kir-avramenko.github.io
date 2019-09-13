@@ -55,7 +55,7 @@ function createJobDescription(description, skills) {
 
   const para = document.createElement('p');
   para.setAttribute('class', 'text');
-  para.innerText = description;
+  para.innerHTML = description;
 
   divDesc.appendChild(para);
 

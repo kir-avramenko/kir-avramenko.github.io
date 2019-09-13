@@ -21,7 +21,7 @@
 }
 
 .head {
-  min-height: 32.8vh;
+  min-height: 32vh;
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -109,7 +109,7 @@
 }
 
 .foot {
-  min-height: 18.2vh;
+  min-height: 22vh;
   background-color: #333;
   display: -webkit-box;
   display: -ms-flexbox;
