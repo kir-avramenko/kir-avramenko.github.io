@@ -6,7 +6,8 @@
   "scripts": {
     "format": "prettier --write \"src/**/*.{js}\"",
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html src/imgs/*"
+    "build": "parcel build src/index.html src/imgs/*",
+    "start": "npm run build && node server.js"
   },
   "repository": {
     "type": "git",
