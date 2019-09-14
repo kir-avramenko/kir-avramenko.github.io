@@ -28,14 +28,14 @@ a {
   color: #5a5959;
 
   &:hover {
-    color: #00aff0;
+    color: $text-link-color;
   }
 }
 
 .url a {
   border-bottom: 1px solid #5a5959;
   &:hover {
-    border-bottom: 1px solid #00aff0;
+    border-bottom: 1px solid $text-link-color;
   }
 }
 
@@ -139,6 +139,14 @@ h1 {
 
   &:not(:last-child) {
     padding-bottom: 9px;
+  }
+
+  a {
+    color: hsla(196, 100%, 35%, 1);
+
+    &:hover {
+      color: $text-link-color;
+    }
   }
 }
 

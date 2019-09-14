@@ -301,6 +301,14 @@ h1 {
   padding-bottom: 9px;
 }
 
+.text a {
+  color: #0083b3;
+}
+
+.text a:hover {
+  color: #00aff0;
+}
+
 .company-img {
   width: 50px;
   margin: 10px 0 0 0;
