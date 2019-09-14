@@ -1,62 +1,49 @@
-import attachWorkExpToCardContent from "./elementsCreator.js";
-import XpSection from "./xpSection.js";
-import JobGeneral from "./jobGeneral.js";
+import createPortfolio from './portfolioCreator';
+import createJobItem from './jobCreator';
+import { createLinkAndIcon } from './domHelper';
+import handleNavClick from './navigationCtrl';
+import projsList from '../projsList.json';
+import jobs from '../jobs.json';
+import footerData from '../footerData.json';
 
-const msXp = `Did apprenticeship in ${createLink(
-  "identity management team",
-  "http://aka.ms/b2c"
-)}. I was implementing full stack project that allows customers to setup RestApi endpoints on Azure Portal during sign up flow`;
+function createPortfolioFromJson(projects) {
+  const divProjects = document.getElementById('portfolio-projects');
 
-const nasXp = `Worked on ${createLink(
-  "Ukrainian transit visa registration",
-  "https://visa.mfa.gov.ua"
-)} government web app with 30k unique visitors per month`;
-
-const gameXp = `Created 2 arcade/puzzle mobile games: ${createLink(
-  "BunnyGolf",
-  "https://visa.mfa.gov.ua"
-)}  and ${createLink("BeeCell", "https://youtu.be/TnggONrg0c8")}`;
-
-const xpSectionsArr = [
-  new XpSection(
-    new JobGeneral(
-      "Software Design Engineer",
-      "Microsoft via InConsulting",
-      "Feb 2019 - June 2019"
-    ),
-    msXp,
-    "imgs/ms_logo.png",
-    ["Typescript", "Knockout JS", "C#", "Unit testing"],
-    "imgs/azure_b2c.jpg" 
-  ),
-
-  new XpSection(
-    new JobGeneral(
-      "Software Engineer",
-      "Institute of Software Systems NAS of Ukraine ",
-      "July 2017 – Nov 2018"
-    ),
-    nasXp,
-    "imgs/nas.jpg",
-    ["HTML", "CSS", "JavaScript", "C#", "Unit testing", "Selenium"],
-    "imgs/visasnippet.jpg"
-  ),
-  new XpSection(
-    new JobGeneral("Game developer", "Superlemon Games", "Dec 2016 - Jan 2019"),
-    gameXp,
-    "imgs/superlemonlogo.png",
-    ["Unity engine", "C#"],
-    "imgs/superlemonsnippet.jpg"
-  )
-];
-
-function createLink(text, url) {
-  var link = document.createElement("a");
-  link.setAttribute("href", url);
-  link.setAttribute("target", "_blank");
-  link.innerHTML = text;
-  console.log("link: " + link);
-  return link.outerHTML;
+  for (let i = 0; i < projects.length; i += 1) {
+    const divProject = createPortfolio(projects[i]);
+    divProjects.appendChild(divProject);
+  }
 }
 
-attachWorkExpToCardContent(xpSectionsArr);
+function createJobsFromJson(arrJobs) {
+  const divJobs = document.getElementById('jobs');
+
+  for (let i = 0; i < arrJobs.length; i += 1) {
+    const divProject = createJobItem(arrJobs[i]);
+    divJobs.appendChild(divProject);
+  }
+}
+
+function createFooterItems(arrData) {
+  const footerLinks = document.getElementById('footer-links');
+
+  for (let i = 0; i < arrData.length; i += 1) {
+    const iData = arrData[i];
+    const anchor = createLinkAndIcon(
+      iData.link,
+      iData.name,
+      '',
+      iData.iconClass.concat(' icon')
+    );
+
+    const paragraph = document.createElement('p');
+    paragraph.innerHTML = anchor.outerHTML;
+
+    footerLinks.appendChild(paragraph);
+  }
+}
+
+createPortfolioFromJson(projsList.projects);
+createJobsFromJson(jobs.jobs);
+createFooterItems(footerData.data);
+handleNavClick();

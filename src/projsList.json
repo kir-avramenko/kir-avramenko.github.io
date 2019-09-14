@@ -1,0 +1,12 @@
+{
+  "projects": [
+    {
+      "name": "Joburl.io",
+      "link": "https://joburl.io/",
+      "shortLink": "joburl.io/",
+      "repoLink": "https://github.com/kyrylo-1/JobUrl",
+      "description": "URL shortener for job websites",
+      "img": "https://github.com/kyrylo-1/JobUrl/blob/master/other/showcase.JPG?raw=true"
+    }
+  ]
+}

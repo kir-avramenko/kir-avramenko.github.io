@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 .skill-tag {
   margin: 1.5rem 0 2.3rem 0;
@@ -13,10 +13,5 @@
     padding: 0.45rem;
     margin: 0.3rem 0.7rem 0.3rem 0;
     font-family: Camphor, Open Sans, Segoe UI, sans-serif;
-
-    &:hover {
-      cursor: default;
-      color: $text-link-color;
-    }
   }
 }
