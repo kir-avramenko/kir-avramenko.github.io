@@ -1,6 +1,7 @@
 import createPortfolio from './portfolioCreator';
 import createJobItem from './jobCreator';
 import { createLinkAndIcon } from './domHelper';
+import handleNavClick from './navigationCtrl';
 import projsList from '../projsList.json';
 import jobs from '../jobs.json';
 import footerData from '../footerData.json';
@@ -45,3 +46,4 @@ function createFooterItems(arrData) {
 createPortfolioFromJson(projsList.projects);
 createJobsFromJson(jobs.jobs);
 createFooterItems(footerData.data);
+handleNavClick();
