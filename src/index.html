@@ -9,45 +9,184 @@
       href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
     />
     <link rel="stylesheet" href="./styles/style.css" type="text/css" />
-    <link rel="shortcut icon" href="./imgs/code.png" />
-    <meta name="theme-color" content="#ffffff" />
     <link
-      href="https://fonts.googleapis.com/css?family=Assistant"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="shortcut icon" href="./imgs/code.png" />
     <title>Kyrylo</title>
   </head>
-  <body>
-    <div class="head">
-      <nav class="nav">
-        <a id="nav-portfolio">Portfolio</a>
-        <a id="nav-experience">Experience</a>
-        <a id="nav-contact">Contact</a>
+  <body class="">
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <div class="row center-align ">
+            <a href="#latest-proj" class="col l4 s4 white-text">PROJECTS</a>
+            <a href="#xp" class="col l4  s4 white-text">EXPERIENCE</a>
+            <a href="#!" class="col l4  s4 white-text">CONTACT</a>
+          </div>
+        </div>
       </nav>
-      <div class="hi">
-        <h1>👋 Hi, I'm Kyrylo Avramenko.</h1>
-        <p>(I'm a web developer)</p>
+    </div>
+    <div class="container-wide container-gradient">
+      <!-- <img src="imgs/img3.jpg" style="width:100%;" /> -->
+      <div class="center-align text-over">
+        <h3 class="white-text">👋 Hi, I'm Kyrylo Avramenko.</h3>
+        <h5 class="white-text">(I'm a web developer)</h5>
       </div>
     </div>
-
-    <div class="body">
-      <div class="section portfolio">
-        <h2>My portfolio</h2>
-
-        <div id="portfolio-projects"></div>
+    <div class="container ">
+      <div class="section" id="latest-proj">
+        <h4 class="center-align">LATEST PROJECTS</h4>
+        <br />
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="https://github.com/kyrylo-1/JobUrl/blob/master/other/showcase.JPG?raw=true"
+            />
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <span class="card-title">Joburl.io</span>
+              <p>URL shortener for job websites</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="section experience">
-        <h2>Experience</h2>
-        <div id="jobs"></div>
+      <div class="section" id="xp">
+        <h4 class="center-align">EXPERIENCE</h4>
+        <br />
+        <!-- ===================MICROSOFT======================== -->
+        <div class="card">
+          <div class="card-content job-container">
+            <a href="#!">
+              <img
+                src="https://media.licdn.com/dms/image/C4D0BAQEko6uLz7XylA/company-logo_400_400/0?e=1576108800&v=beta&t=Dnc8pBrZvQ26Adsl9wgXGIuxJ_xE4Nsh-eA7Wv8TWwE"
+                alt="Microsoft icon"
+                class="company-img"
+              />
+            </a>
+
+            <div>
+              <h6>Software Design Engineer</h6>
+              <p>Microsoft via InConsulting</p>
+              <p class="grey-text">Feb 2019 - June 2019</p>
+              <p class="small-margin-top">
+                Did apprenticeship in the
+                <a href="http://aka.ms/b2c" target="_blank"
+                  >identity management team</a
+                >. I was implementing a full-stack project that allows customers
+                to setup RestApi endpoints on Azure Portal during sign up flow.
+              </p>
+              <br />
+              <div>
+                <span class="chip green lighten-5">
+                  Typescript
+                </span>
+                <span class="chip green lighten-5">
+                  Knockout JS
+                </span>
+                <span class="chip green lighten-5">
+                  C#
+                </span>
+                <span class="chip green lighten-5">
+                  Unit testing
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ===================NAS======================== -->
+        <div class="card">
+          <div class="card-content job-container">
+            <a href="#!">
+              <img src="/imgs/nas.jpg" alt="NAS icon" class="company-img" />
+            </a>
+
+            <div>
+              <h6>Software Engineer</h6>
+              <p>Institute of Software Systems NAS of Ukraine</p>
+              <p class="grey-text">July 2017 – Nov 2018</p>
+              <p class="small-margin-top">
+                Worked on
+                <a href="https://visa.mfa.gov.ua" target="_blank"
+                  >Ukrainian transit visa registration</a
+                >
+                government web app with 30k unique visitors per month
+              </p>
+              <br />
+              <div>
+                <span class="chip green lighten-5">
+                  HTML
+                </span>
+                <span class="chip green lighten-5">
+                  CSS
+                </span>
+                <span class="chip green lighten-5">
+                  JavaScript
+                </span>
+                <span class="chip green lighten-5">
+                  C#
+                </span>
+                <span class="chip green lighten-5">
+                  Unit testing
+                </span>
+                <span class="chip green lighten-5">
+                  Selenium
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ==================SUPERLEMON================== -->
+        <div class="card">
+          <div class="card-content job-container">
+            <a href="#!">
+              <img
+                src="/imgs/superlemonlogo.png"
+                alt="Superlemon icon"
+                class="company-img"
+              />
+            </a>
+
+            <div>
+              <h6>Game developer</h6>
+              <p>Superlemon Games</p>
+              <p class="grey-text">Feb 2019 - June 2019</p>
+              <p class="small-margin-top">
+                Worked part-time as a member of the game dev team. I design code
+                base, program gameplay, worked on CPU & GPU optimization.<br />Created
+                2 arcade/puzzle mobile games:
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.Superlemon.BunnyGolf"
+                  target="_blank"
+                  >BunnyGolf</a
+                >
+                and
+                <a href="https://youtu.be/TnggONrg0c8" target="_blank"
+                  >BeeCell</a
+                >
+              </p>
+              <br />
+              <div>
+                <span class="chip green lighten-5">
+                  Unity engine
+                </span>
+                <span class="chip green lighten-5">
+                  C#
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- ==== -->
     </div>
-
-    <footer class="foot">
-      <div class="links">
-        <div id="footer-links" class="container"></div>
-      </div>
-    </footer>
 
     <script src="scripts/main.js"></script>
   </body>
