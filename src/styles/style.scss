@@ -1,5 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .block {
   margin-top: 40px;
+  &::before {
+    display: block;
+    content: ' ';
+    margin-top: -64px;
+    height: 64px;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 .company-img {
