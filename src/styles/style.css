@@ -65,6 +65,14 @@ nav a {
   width: 100%;
 }
 
+.linked-paragraph {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.linked-paragraph:hover {
+  color: #039be5;
+}
+
 footer a {
   color: #ccc;
   font-size: 1.3rem;
