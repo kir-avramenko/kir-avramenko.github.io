@@ -1,9 +1,9 @@
 // import createPortfolio from './portfolioCreator';
 import createJobItem from './jobCreator';
 import { createLinkAndIcon } from './domHelper';
-import projsList from '../projsList.json';
-import jobs from '../jobs.json';
-import footerData from '../footerData.json';
+// import projsList from '../projsList.json';
+// import jobs from '../jobs.json';
+// import footerData from '../footerData.json';
 
 function createPortfolioFromJson(projects) {
   const divProjects = document.getElementById('portfolio-projects');

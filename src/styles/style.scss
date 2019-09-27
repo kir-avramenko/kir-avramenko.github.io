@@ -23,6 +23,11 @@
   }
 }
 
+.small-margin-vertical {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
 nav {
   background: linear-gradient(50deg, HSLA(205, 43%, 49%, 1), #f62d51);
   a {
@@ -41,6 +46,14 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+  }
+}
+
+footer a {
+  color: #ccc;
+  font-size: 1.2rem;
+  &:hover {
+    color: #fff;
   }
 }
 

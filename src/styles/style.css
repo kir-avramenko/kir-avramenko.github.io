@@ -23,6 +23,11 @@
   margin-top: 0;
 }
 
+.small-margin-vertical {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
 nav {
   background: linear-gradient(50deg, HSLA(205, 43%, 49%, 1), #f62d51);
 }
@@ -45,6 +50,15 @@ nav a {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100%;
+}
+
+footer a {
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+footer a:hover {
+  color: #fff;
 }
 
 @media only screen and (max-width: 480px) {
