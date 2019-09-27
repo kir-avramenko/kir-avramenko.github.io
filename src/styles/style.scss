@@ -1,179 +1,83 @@
-@import './variables';
-@import './mixins';
-@import './skill-tag';
-@import './head';
-@import './websiteinfo';
-@import './footer';
-
-* {
-  box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
 }
 
-body {
-  @include resetPaddingAndMargin();
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  font-size: 1.2rem;
-  background-color: #edeef0;
-  color: $primary-text-color;
-}
-*::selection {
-  background: #97e7ff;
-  color: #fff;
-}
-
-a {
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-  color: #5a5959;
-
-  &:hover {
-    color: $text-link-color;
-  }
-}
-
-.url a {
-  border-bottom: 1px solid #5a5959;
-  &:hover {
-    border-bottom: 1px solid $text-link-color;
-  }
-}
-
-.icon {
-  display: inline-block;
-  width: 1em;
-  margin-right: 0.5em;
-  font-size: 1em;
-}
-
-img,
-form {
-  width: 100%;
-}
-
-h1 {
-  margin: 0.67em;
-  font-weight: 400;
-}
-
-.section {
-  padding: 2vh 19.1%;
-  text-align: center;
-
-  .project {
-    margin: 4vh 0;
-    background-color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
-      0 3px 1px -2px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    border-radius: 4px;
-    text-align: left;
-  }
-}
-
-@media (max-width: 800px) {
-  .section {
-    padding: 2vh 11.805%;
-  }
-}
-@media (max-width: 420px) {
-  .section {
-    padding: 2vh 0;
-  }
-}
-
-.left {
-  display: inline-block;
-  display: flex;
-  float: left;
-  align-items: center;
-}
-.right {
-  display: inline-block;
-  padding: 18px;
-  float: left;
-  text-align: left;
-}
-
-@media (max-width: 1200px) {
-  .left,
-  .right {
-    width: 100% !important;
-  }
-}
-
-.image-container {
-  position: relative;
-  width: 60%;
-  float: left;
-}
-.website-image {
-  position: relative;
-  img {
+.block {
+  margin-top: 40px;
+  &::before {
     display: block;
-    width: 100%;
-  }
-}
-
-.website-link {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  margin: 6px 0;
-  padding: 12px;
-  border-radius: 4px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
-  color: #5a5959;
-  font-size: 16px;
-  text-align: center;
-}
-.image-container:hover .website-info {
-  visibility: visible;
-  opacity: 1;
-}
-.text {
-  margin: 0;
-  line-height: 1.5;
-
-  &:not(:last-child) {
-    padding-bottom: 9px;
-  }
-
-  a {
-    color: hsla(196, 100%, 35%, 1);
-
-    &:hover {
-      color: $text-link-color;
-    }
+    content: ' ';
+    margin-top: -64px;
+    height: 64px;
+    visibility: hidden;
+    pointer-events: none;
   }
 }
 
 .company-img {
   width: 50px;
-  margin: 10px 0 0 0;
   display: block;
-  float: left;
+  margin: 3px 10px 0 0;
 }
 
-.experience .project {
-  padding: 18px;
-}
-
-.job-header {
-  padding-bottom: 18px;
-}
-
-.header-info {
+.job-container {
   display: flex;
-  flex-flow: column;
-  padding-left: 15px;
-  h3,
-  h4,
-  h5 {
-    margin: 0;
-    margin-bottom: 0.1rem;
-    font-weight: normal;
+}
+
+.card .card-content {
+  .small-margin-top {
+    margin-top: 8px;
+  }
+
+  h6 {
+    font-weight: 500;
+    margin-top: 0;
+  }
+}
+
+.small-margin-vertical {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+nav {
+  background: linear-gradient(50deg, HSLA(205, 43%, 49%, 1), #f62d51);
+  a {
+    font-size: 1.5rem;
+  }
+}
+
+.container-gradient {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(50deg, HSLA(205, 62%, 44%, 1), #f62d51);
+  height: 30vh;
+  .text-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}
+
+.linked-paragraph {
+  color: rgba(0, 0, 0, 0.87);
+  &:hover {
+    color: #039be5;
+  }
+}
+
+footer a {
+  color: #ccc;
+  font-size: 1.3rem;
+  &:hover {
+    color: #fff;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  nav a {
+    font-size: 1rem;
   }
 }
