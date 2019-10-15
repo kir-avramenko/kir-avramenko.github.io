@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 app.use(express.static(path.join(__dirname, '/dist')));
 
-app.get('/*', function getAll(req, res) {
+app.get('*', function getAll(req, res) {
   res.sendFile('index.html', { root: path.join(__dirname, '/dist') });
 });
 
